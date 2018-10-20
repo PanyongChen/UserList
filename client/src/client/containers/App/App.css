@@ -80,6 +80,11 @@ input {
     background: lightblue;
 
 }
+
+.form-control{
+    width: 165%;
+    height: 30px;
+}
 /* .bigBody{
     background-image: url("./1.jpg");
     background-size: cover;

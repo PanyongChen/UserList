@@ -30,6 +30,10 @@ class EditUser extends Component {
         console.log(this.state);
     };
 
+    genderChange = e => {
+        this.setState({ sex: e.target.value });
+      };
+
     handleSubmit = e => {
         let pendingUser = {
             FirstName: this.state.fn,
@@ -99,19 +103,20 @@ class EditUser extends Component {
                     </div>
                 </div>
                 <div className="spanL">
-                    <div className="nameField">Sex : </div>
-
-                    <div className="inputField">
-                        <input
-                            type="text"
-                            name="sex"
-                            value={this.state.sex}
-                            onChange={this.handleChange}
-                            required={true}
-                            placeholder="Sex"
-                        />
-                    </div>
+                <div className="nameField">Gender: </div>
+                <div className="inputField">
+                <select
+                    className="form-control"
+                    id="sex"
+                    onChange={this.genderChange}
+                    value={this.state.sex}
+                    placeholder="Sex"
+                    >
+                     <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
                 </div>
+            </div>
                 <div className="spanL">
                     <div className="nameField"> Age : </div>
                     <div className="inputField">
